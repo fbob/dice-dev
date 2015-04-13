@@ -1,0 +1,5 @@
+#include "stlformat.h"
+
+STLLoader::STLLoader()
+{
+}

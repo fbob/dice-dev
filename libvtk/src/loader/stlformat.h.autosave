@@ -1,0 +1,12 @@
+#ifndef STLFORMAT_H
+#define STLFORMAT_H
+
+#include "formatbase.h"
+
+class STLLoader: public FormatBase
+{
+public:
+    STLLoader();
+};
+
+#endif // STLFORMAT_H
