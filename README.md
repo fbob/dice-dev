@@ -1,1 +1,1 @@
-# dice-dev
+# Dynamic Interface for Computation and Evaluation
