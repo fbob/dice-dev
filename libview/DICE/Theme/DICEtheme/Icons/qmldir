@@ -1,0 +1,5 @@
+module DICE.Style.Icons
+FontAwesomeIcon 1.0 FontAwesomeIcon.qml
+FontAwesomeCircleIcon 1.0 FontAwesomeCircleIcon.qml
+
+FontAwesome 1.0 fontawesome.js

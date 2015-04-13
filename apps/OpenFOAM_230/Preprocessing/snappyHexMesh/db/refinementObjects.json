@@ -1,0 +1,5 @@
+{
+    "objectsRefinementMode2D": ["distance"],
+    "objectsRefinementMode3D": ["inside", "outside"],
+    "objectsRefinementModeSTL_file": ["inside", "outside", "distance"]
+}

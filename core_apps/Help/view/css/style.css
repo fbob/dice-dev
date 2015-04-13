@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "Roboto Regular";
+    src: url(../Fonts/roboto/Roboto-Regular.ttf) format('truetype');
+}
+
+body {
+  font-family: "Roboto Regular";
+}
+
+li {
+  font-size: 12px;
+  color: blue;
+}

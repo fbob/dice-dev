@@ -1,0 +1,5 @@
+module DICE.App.Renderer
+
+plugin vtk
+
+Renderer 1.0 Renderer.qml

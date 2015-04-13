@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>CodeMirror</title>
+
+		<link rel=stylesheet href="lib/codemirror.css">
+		<link rel=stylesheet href="doc/docs.css">
+
+		<script src="lib/codemirror.js"></script>
+
+		<!-- themes -->
+		<link rel="stylesheet" href="theme/3024-day.css">
+		<link rel="stylesheet" href="theme/3024-night.css">
+		<link rel="stylesheet" href="theme/ambiance.css">
+		<link rel="stylesheet" href="theme/base16-dark.css">
+		<link rel="stylesheet" href="theme/base16-light.css">
+		<link rel="stylesheet" href="theme/blackboard.css">
+		<link rel="stylesheet" href="theme/cobalt.css">
+		<link rel="stylesheet" href="theme/colorforth.css">
+		<link rel="stylesheet" href="theme/eclipse.css">
+		<link rel="stylesheet" href="theme/elegant.css">
+		<link rel="stylesheet" href="theme/erlang-dark.css">
+		<link rel="stylesheet" href="theme/lesser-dark.css">
+		<link rel="stylesheet" href="theme/mbo.css">
+		<link rel="stylesheet" href="theme/mdn-like.css">
+		<link rel="stylesheet" href="theme/midnight.css">
+		<link rel="stylesheet" href="theme/monokai.css">
+		<link rel="stylesheet" href="theme/neat.css">
+		<link rel="stylesheet" href="theme/neo.css">
+		<link rel="stylesheet" href="theme/night.css">
+		<link rel="stylesheet" href="theme/paraiso-dark.css">
+		<link rel="stylesheet" href="theme/paraiso-light.css">
+		<link rel="stylesheet" href="theme/pastel-on-dark.css">
+		<link rel="stylesheet" href="theme/rubyblue.css">
+		<link rel="stylesheet" href="theme/solarized.css">
+		<link rel="stylesheet" href="theme/the-matrix.css">
+		<link rel="stylesheet" href="theme/tomorrow-night-bright.css">
+		<link rel="stylesheet" href="theme/tomorrow-night-eighties.css">
+		<link rel="stylesheet" href="theme/twilight.css">
+		<link rel="stylesheet" href="theme/vibrant-ink.css">
+		<link rel="stylesheet" href="theme/xq-dark.css">
+		<link rel="stylesheet" href="theme/xq-light.css">
+		<link rel="stylesheet" href="theme/zenburn.css">
+
+		<script src="mode/xml/xml.js"></script>
+		<script src="mode/javascript/javascript.js"></script>
+		<script src="mode/css/css.js"></script>
+		<script src="mode/htmlmixed/htmlmixed.js"></script>
+
+		<!-- addons -->
+		<script src="addon/selection/active-line.js"></script>
+		<script src="addon/edit/matchbrackets.js"></script>
+		<script src="addon/edit/closebrackets.js"></script>
+		
+		<!-- addons: searching -->
+		<link rel="stylesheet" href="addon/dialog/dialog.css">
+		<link rel="stylesheet" href="addon/search/matchesonscrollbar.css">
+		<script src="addon/dialog/dialog.js"></script>
+		<script src="addon/search/searchcursor.js"></script>
+		<script src="addon/search/search.js"></script>
+		<script src="addon/scroll/annotatescrollbar.js"></script>
+		<script src="addon/search/matchesonscrollbar.js"></script>
+		
+		<!-- addons: folding -->
+		<link rel="stylesheet" href="addon/fold/foldgutter.css" />
+		<script src="addon/fold/foldcode.js"></script>
+  		<script src="addon/fold/foldgutter.js"></script>
+		<script src="addon/fold/brace-fold.js"></script>
+		<script src="addon/fold/xml-fold.js"></script>
+		<script src="addon/fold/markdown-fold.js"></script>
+		<script src="addon/fold/comment-fold.js"></script>
+
+		<script src="doc/activebookmark.js"></script>
+		
+		<style type="text/css">
+			body {
+				margin: 0
+			}
+			.CodeMirror {
+				height: 100%
+			}
+			#code{
+				height: 100%;
+				margin: 0
+			}
+			form {
+				height: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<form>
+		  <textarea id="code"></textarea>
+		</form>
+	</body>
+	<script>
+		var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+			mode : "application/javascript",
+			lineNumbers : true,
+			matchBrackets : true,
+			styleActiveLine : true,
+			autoCloseBrackets: true,
+			extraKeys : {
+				"F1" : function(cm) {
+					proxy.helpRequest(cm.getTokenAt(cm.getCursor()).string)
+				},
+				"Ctrl-D": function(cm){ cm.foldCode(cm.getCursor()); }
+			},
+			lineWrapping: true,
+			foldGutter: true,
+			gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"]
+		});
+	</script>
+</html>

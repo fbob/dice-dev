@@ -1,0 +1,18 @@
+{
+  "system/meshDict maxCellSize" : {
+   "source" : "http://www.c-fields.com/technical-area/downloads/documentation-cfmesh",
+   "url" : "help.html"
+   },
+   "system/meshDict boundaryCellSize" : {
+   "source" : "http://www.c-fields.com/technical-area/downloads/documentation-cfmesh",
+   "url" : "help.html"
+   },
+   "system/meshDict boundaryCellSizeRefinementThickness" : {
+   "source" : "http://www.c-fields.com/technical-area/downloads/documentation-cfmesh",
+   "url" : "help.html"
+   },
+   "system/meshDict minCellSize" : {
+   "source" : "http://www.c-fields.com/technical-area/downloads/documentation-cfmesh",
+   "url" : "help.html"
+   }
+}

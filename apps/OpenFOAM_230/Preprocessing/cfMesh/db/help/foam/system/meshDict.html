@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<body class="container-fluid">
+		<h1>Mandatory Settings </h1>
+		<dl>
+			<dt id="maxCellSize">
+				maxCellSize
+			</dt>
+			<dd>
+				This option is used for refinement of cells at the boundary. It is a global option and the requested cell size is applied everywhere at the boundary
+			</dd>
+		</dl>
+		
+		<h1>Refinement Settings </h1>
+		<dl>
+			<dt id="boundaryCellSize">
+				boundaryCellSize
+			</dt>
+			<dd>
+				Specifies the distance from the boundary at which the boundaryCellSize is still applied
+			</dd>
+			<dt id="boundaryCellSizeRefinementThickness">
+				boundaryCellSizeRefinementThickness
+			</dt>
+			<dd>
+				Etiam porta sem malesuada magna mollis euismod.
+			</dd>
+			<dt id="minCellSize">
+				minCellSize
+			</dt>
+			<dd>
+				is a global option which activates automatic refinement of the mesh template. This option performs refinement in regions where the cells are larger than the estimated feature size. The scalar value provided with this setting specifies the smallest cell size allowed by this procedure.This option is useful for quick simulation because it can generate meshes in complex geometry with low user effort. However, if high mesh quality is required, it provides hints where some mesh refinement is needed.
+			</dd>
+		</dl>
+		
+		<h1>Local Refinement </h1>
+		<dl>
+			<dt id="additionalRefinementLevels">
+				additionalRefinementLevels
+			</dt>
+			<dd>
+				Additional refinement levels to the maxCellSize.
+			</dd>
+			<dt id="refinementThickness">
+				refinementThickness
+			</dt>
+			<dd>
+				Refinement of the refinement region away from the patch.
+			</dd>
+			<dt id="cellSize">
+				cellSize
+			</dt>
+			<dd>
+				Requested cell size for the patch.
+			</dd>
+		</dl>
+	</body>
+</html>

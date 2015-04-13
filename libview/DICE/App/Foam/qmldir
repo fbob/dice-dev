@@ -1,0 +1,16 @@
+module DICE.App.Foam
+
+FoamValueConnector 1.0 FoamValueConnector.qml
+
+FoamDictCheck 1.0 FoamDictCheck.qml
+FoamVarCheck 1.0 FoamVarCheck.qml
+
+FoamValue 1.0 FoamValue.qml
+
+FoamVector 1.0 FoamVector.qml
+FoamVector2D 1.0 FoamVector2D.qml
+
+FoamDropDown 1.0 FoamDropDown.qml
+FoamRadioButtonGroup 1.0 FoamRadioButtonGroup.qml
+
+FoamToggleButton 1.0 FoamToggleButton.qml

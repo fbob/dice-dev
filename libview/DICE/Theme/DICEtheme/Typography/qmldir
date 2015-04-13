@@ -1,0 +1,12 @@
+module DICE.Style.Typography
+ScalableFont 1.0 ScalableFont.qml
+ScalableLineHeight 1.0 ScalableLineHeight.qml
+
+ButtonText 1.0 ButtonText.qml
+MenuText 1.0 MenuText.qml
+CaptionText 1.0 CaptionText.qml
+BasicText 1.0 BasicText.qml
+SubheaderText 1.0 SubheaderText.qml
+BodyText 1.0 BodyText.qml
+TitleText 1.0 TitleText.qml
+HeadlineText 1.0 HeadlineText.qml

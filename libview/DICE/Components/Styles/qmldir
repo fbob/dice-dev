@@ -1,0 +1,6 @@
+module DICE.Components.Styles
+
+
+ScrollViewStyle_DICE 1.0 ../Layout/Styles/ScrollViewStyle_DICE.qml
+ScrollArrow 1.0 ../Layout/Styles/ScrollArrow.qml
+ScrollBar 1.0 ../Layout/Styles/ScrollBar.qml

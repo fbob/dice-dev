@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+	<body class="container-fluid">
+		<h1>Castellated Mesh Controls</h1>
+		<dl>
+			<dt id="maxLocalCells">
+				maxLocalCells
+			</dt>
+			<dd>
+				If local number of cells is >= maxLocalCells on any processor switches from from refinement followed by balancing
+				(current method) to (weighted) balancing before refinement.
+			</dd>
+		</dl>
+        <dl>
+			<dt id="maxGlobalCells">
+				maxLocalCells
+			</dt>
+			<dd>
+				Overall cell limit (approximately). Refinement will stop immediately
+                upon reaching this number so a refinement level might not complete.
+                Note that this is the number of cells before removing the part which
+                is not 'visible' from the keepPoint. The final number of cells might
+                actually be a lot less.
+			</dd>
+		</dl>
+        <dl>
+			<dt id="minRefinementCells">
+				minRefinementCells
+			</dt>
+			<dd>
+				The surface refinement loop might spend lots of iterations refining just a
+                few cells. This setting will cause refinement to stop if <= minimumRefine
+                are selected for refinement. Note: it will at least do one iteration
+                (unless the number of cells to refine is 0)
+			</dd>
+		</dl>
+        <dl>
+			<dt id="maxLoadUnbalance">
+				maxLoadUnbalance
+			</dt>
+			<dd>
+				Allow a certain level of imbalance during refining
+                (since balancing is quite expensive)
+                Expressed as fraction of perfect balance (= overall number of cells /
+                nProcs). 0=balance always.
+			</dd>
+		</dl>
+        <dl>
+			<dt id="nCellsBetweenLevels">
+				nCellsBetweenLevels
+			</dt>
+			<dd>
+				Number of buffer layers between different levels.
+                1 means normal 2:1 refinement restriction, larger means slower
+                refinement.
+			</dd>
+		</dl>
+        <dl>
+			<dt id="resolveFeatureAngle">
+				resolveFeatureAngle
+			</dt>
+			<dd>
+				Resolve sharp angles.
+			</dd>
+		</dl>
+        <dl>
+			<dt id="locationInMesh">
+				locationInMesh
+			</dt>
+			<dd>
+				After refinement patches get added for all refinementSurfaces and
+                all cells intersecting the surfaces get put into these patches. The
+                section reachable from the locationInMesh is kept.
+                NOTE: This point should never be on a face, always inside a cell, even
+                after refinement.
+			</dd>
+		</dl>
+        <dl>
+			<dt id="allowFreeStandingZoneFaces">
+				allowFreeStandingZoneFaces
+			</dt>
+			<dd>
+				Whether any faceZones (as specified in the refinementSurfaces)
+                are only on the boundary of corresponding cellZones or also allow
+                free-standing zone faces. Not used if there are no faceZones.
+			</dd>
+		</dl>
+        
+        <!-- snapControls -->
+        <!-- ============ -->
+        <h1>Settings for the Snapping</h1>
+        <dl>
+			<dt id="nSmoothPatch">
+				nSmoothPatch
+			</dt>
+			<dd>
+				Number of patch smoothing iterations before finding correspondence
+                to surface.
+			</dd>
+		</dl>
+        <dl>
+			<dt id="tolerance">
+				tolerance
+			</dt>
+			<dd>
+				Relative distance for points to be attracted by surface feature point
+                or edge. True distance is this factor times local
+                maximum edge length.
+			</dd>
+		</dl>
+        <dl>
+			<dt id="nSolveIter">
+				nSolveIter
+			</dt>
+			<dd>
+				Number of mesh displacement relaxation iterations.
+			</dd>
+		</dl>
+        <dl>
+			<dt id="nRelaxIter">
+				nRelaxIter
+			</dt>
+			<dd>
+				Maximum number of snapping relaxation iterations. Should stop
+                before upon reaching a correct mesh.
+			</dd>
+		</dl>
+        
+        <h2>Feature snapping</h2>
+        <dl>
+			<dt id="nFeatureSnapIter">
+				nFeatureSnapIter
+			</dt>
+			<dd>
+				Number of feature edge snapping iterations.
+                Leave out altogether to disable.
+			</dd>
+		</dl>
+        <dl>
+			<dt id="implicitFeatureSnap">
+				implicitFeatureSnap
+			</dt>
+			<dd>
+				Detect (geometric only) features by sampling the surface
+                (default=false).
+			</dd>
+		</dl>
+        <dl>
+			<dt id="explicitFeatureSnap">
+				explicitFeatureSnap
+			</dt>
+			<dd>
+				Use castellatedMeshControls::features (default = true)
+			</dd>
+		</dl>
+        <dl>
+			<dt id="multiRegionFeatureSnap">
+				multiRegionFeatureSnap
+			</dt>
+			<dd>
+				Detect points on multiple surfaces (only for explicitFeatureSnap)
+			</dd>
+		</dl>
+        
+        
+        <!-- addLayersControls -->
+        <!-- ================= -->
+        <dl>
+			<dt id="relativeSizes">
+				relativeSizes
+			</dt>
+			<dd>
+				Are the thickness parameters below relative to the undistorted
+                size of the refined cell outside layer (true) or absolute sizes (false).
+			</dd>
+		</dl>
+        <dl>
+			<dt id="expansionRatio">
+				expansionRatio
+			</dt>
+			<dd>
+				Expansion factor for layer mesh.
+			</dd>
+		</dl>
+        <dl>
+			<dt id="finalLayerThickness">
+				finalLayerThickness
+			</dt>
+			<dd>
+				Wanted thickness of final added cell layer. If multiple layers
+                is the thickness of the layer furthest away from the wall.
+                Relative to undistorted size of cell outside layer.
+                See relativeSizes parameter.
+			</dd>
+		</dl>
+        <dl>
+			<dt id="multiRegionFeatureSnap">
+				multiRegionFeatureSnap
+			</dt>
+			<dd>
+				Detect points on multiple surfaces (only for explicitFeatureSnap)
+			</dd>
+		</dl>
+        <dl>
+			<dt id="minThickness">
+				minThickness
+			</dt>
+			<dd>
+				Minimum thickness of cell layer. If for any reason layer
+                cannot be above minThickness do not add layer.
+                Relative to undistorted size of cell outside layer.
+			</dd>
+		</dl>
+        <dl>
+			<dt id="nGrow">
+				nGrow
+			</dt>
+			<dd>
+				If points get not extruded do nGrow layers of connected faces that are
+                also not grown. This helps convergence of the layer addition process
+                close to features.
+                Note: changed(corrected) w.r.t 17x! (didn't do anything in 17x)
+			</dd>
+		</dl>
+        
+        <h2>Advanced Settings</h2>
+        <dl>
+			<dt id="featureAngle">
+				featureAngle
+			</dt>
+			<dd>
+				When not to extrude surface. 0 is flat surface, 90 is when two faces
+                are perpendicular
+			</dd>
+		</dl>
+        <dl>
+			<dt id="slipFeatureAngle">
+				slipFeatureAngle
+			</dt>
+			<dd>
+				At non-patched sides allow mesh to slip if extrusion direction makes
+                angle larger than slipFeatureAngle.
+			</dd>
+		</dl>
+        <dl>
+			<dt id="nRelaxIter">
+				nRelaxIter
+			</dt>
+			<dd>
+				Maximum number of snapping relaxation iterations. Should stop
+                before upon reaching a correct mesh.
+			</dd>
+		</dl>
+        <dl>
+			<dt id="nSmoothSurfaceNormals">
+				nSmoothSurfaceNormals
+			</dt>
+			<dd>
+				Number of smoothing iterations of surface normals.
+			</dd>
+		</dl>
+        <dl>
+			<dt id="nSmoothNormals">
+				nSmoothNormals
+			</dt>
+			<dd>
+				Number of smoothing iterations of interior mesh movement direction.
+			</dd>
+		</dl>
+        <dl>
+			<dt id="nSmoothThickness">
+				nSmoothThickness
+			</dt>
+			<dd>
+				Smooth layer thickness over surface patches.
+			</dd>
+		</dl>
+        <dl>
+			<dt id="maxFaceThicknessRatio">
+				maxFaceThicknessRatio
+			</dt>
+			<dd>
+				Stop layer growth on highly warped cells.
+			</dd>
+		</dl>
+        <dl>
+			<dt id="maxThicknessToMedialRatio">
+				maxThicknessToMedialRatio
+			</dt>
+			<dd>
+				Reduce layer growth where ratio thickness to medial
+                distance is large.
+			</dd>
+		</dl>
+        <dl>
+			<dt id="minMedianAxisAngle">
+				minMedianAxisAngle
+			</dt>
+			<dd>
+				Angle used to pick up medial axis points
+                Note: changed(corrected) w.r.t 17x! 90 degrees corresponds to 130 in 17x.
+			</dd>
+		</dl>
+        <dl>
+			<dt id="nBufferCellsNoExtrude">
+				nBufferCellsNoExtrude
+			</dt>
+			<dd>
+				Create buffer region for new layer terminations.
+			</dd>
+		</dl>
+        <dl>
+			<dt id="nLayerIter">
+				nLayerIter
+			</dt>
+			<dd>
+				Overall max number of layer addition iterations. The mesher will exit
+                if it reaches this number of iterations; possibly with an illegal
+                mesh.
+			</dd>
+		</dl>
+	</body>
+</html>

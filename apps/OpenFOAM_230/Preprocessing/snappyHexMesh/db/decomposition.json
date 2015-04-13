@@ -1,0 +1,4 @@
+{
+    "methods": ["hierarchical", "simple"],
+    "hierarchicalOrders": ["xyz", "yxz", "yzx", "xzy", "zxy", "zyx"] 
+}

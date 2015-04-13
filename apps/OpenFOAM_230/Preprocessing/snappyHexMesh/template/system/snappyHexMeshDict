@@ -1,0 +1,140 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.3.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      snappyHexMeshDict;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+castellatedMesh true;
+snap            true;
+addLayers       true;
+
+geometry
+{
+};
+
+castellatedMeshControls
+{
+    maxLocalCells 100000;
+    maxGlobalCells 2000000;
+    minRefinementCells 0;
+    nCellsBetweenLevels 1;
+    features
+    (
+    );
+
+    refinementSurfaces
+    {
+    }
+
+    resolveFeatureAngle 3;
+    
+    gapLevelIncrement 0;
+    
+    planarAngle 3;
+
+    refinementRegions
+    {
+    }
+    locationInMesh (0 0 0);
+    allowFreeStandingZoneFaces true;
+}
+
+
+snapControls
+{
+
+    nSmoothPatch 3;
+
+    tolerance 1.0;
+
+    nSolveIter 300;
+
+
+    nRelaxIter 5;
+
+        nFeatureSnapIter 10;
+
+        implicitFeatureSnap false;
+
+        explicitFeatureSnap true;
+
+        multiRegionFeatureSnap true;
+}
+
+
+addLayersControls
+{
+
+    relativeSizes true;
+
+    layers
+    {
+    }
+
+    expansionRatio 1.0;
+
+    finalLayerThickness 0.3;
+
+    minThickness 0.25;
+
+
+    nGrow 0;
+
+    featureAngle 30;
+
+    nRelaxIter 5;
+
+    nSmoothSurfaceNormals 1;
+
+    nSmoothNormals 3;
+
+    nSmoothThickness 10;
+
+    maxFaceThicknessRatio 0.5;
+
+    maxThicknessToMedialRatio 0.3;
+
+    minMedianAxisAngle 90;
+
+    nBufferCellsNoExtrude 0;
+
+    nLayerIter 50;
+}
+
+meshQualityControls
+{
+    #include "meshQualityDict"
+
+    relaxed
+    {
+        maxNonOrtho 75;
+    }
+    
+    nSmoothScale 4;
+    errorReduction 0.75;
+}
+
+
+
+writeFlags
+(
+//     scalarLevels    // write volScalarField with cellLevel for postprocessing
+//     layerSets       // write cellSets, faceSets of faces in layer
+//     layerFields     // write volScalarField for layer coverage
+);
+
+mergeTolerance 1E-6;
+
+
+// ************************************************************************* //

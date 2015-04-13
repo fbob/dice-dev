@@ -1,0 +1,6 @@
+module DICE.Components
+BottomShadow 1.0 BottomShadow.qml
+TopShadow 1.0 TopShadow.qml
+RightShadow 1.0 RightShadow.qml
+LeftShadow 1.0 LeftShadow.qml
+RectShadow 1.0 RectShadow.qml

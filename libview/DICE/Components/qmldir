@@ -1,0 +1,51 @@
+module DICE.Components
+
+# Buttons
+# =======
+DiceButtonStyle 1.0 Buttons/DiceButtonStyle.qml
+FlatButton 1.0 Buttons/FlatButton.qml
+FloatingButton 1.0 Buttons/FloatingButton.qml
+MenuButton 1.0 Buttons/MenuButton.qml
+IconCheckBox 1.0 Buttons/IconCheckBox.qml
+RaisedButton 1.0 Buttons/RaisedButton.qml
+ToggleButton 1.0 Buttons/ToggleButton.qml
+
+# Layout
+# ======
+CoreApp 1.0 Layout/CoreApp.qml
+DescriptionHeader 1.0 Layout/DescriptionHeader.qml
+MainHeader 1.0 Layout/MainHeader.qml
+PaddedScrollViewRect 1.0 Layout/PaddedScrollViewRect.qml
+ScrollView_DICE 1.0 Layout/ScrollView_DICE.qml
+Apps_LeftSideBar 1.0 Layout/Apps_LeftSideBar/Apps_LeftSideBar.qml
+Card 1.0 Layout/Card.qml
+Body 1.0 Layout/Body.qml
+
+Frame 1.0 Borders/Frame.qml
+BottomBorder 1.0 Borders/BottomBorder.qml
+TopBorder 1.0 Borders/TopBorder.qml
+RightBorder 1.0 Borders/RightBorder.qml
+LeftBorder 1.0 Borders/LeftBorder.qml
+
+BottomShadow 1.0 Effects/BottomShadow.qml
+TopShadow 1.0 Effects/TopShadow.qml
+RightShadow 1.0 Effects/RightShadow.qml
+LeftShadow 1.0 Effects/LeftShadow.qml
+RectShadow 1.0 Effects/RectShadow.qml
+
+# Lists
+# =====
+DropDownMenu 1.0 Menus/DropDownMenu.qml
+ToolBarMenu 1.0 Layout/ToolBar/ToolBarMenu.qml
+FullSizeMenuItem 1.0 Layout/ToolBar/FullSizeMenuItem.qml
+SmallSizeMenuItem 1.0 Layout/ToolBar/SmallSizeMenuItem.qml
+ToolBarGroup 1.0 Layout/ToolBar/ToolBarGroup.qml
+GroupBoxRow 1.0 Layout/ToolBar/GroupBoxRow.qml
+FullSizeMenuRoundItem 1.0 Layout/ToolBar/FullSizeMenuRoundItem.qml
+BigToolBarButton 1.0 Layout/ToolBar/BigToolBarButton.qml
+SmallToolBarButton 1.0 Layout/ToolBar/SmallToolBarButton.qml
+ToolBarDivider 1.0 Layout/ToolBar/ToolBarDivider.qml
+
+# Input
+# =====
+InputField 1.0 Inputs/InputField.qml

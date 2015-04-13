@@ -1,0 +1,9 @@
+{
+  "blockMesh": {
+      "useCellSize": false,
+      "spacingX": 0,
+      "spacingY": 0,
+      "spacingZ": 0
+  },
+  "parallelRun": false
+}

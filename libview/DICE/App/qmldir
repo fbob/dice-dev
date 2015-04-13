@@ -1,0 +1,71 @@
+module DICE.App
+
+# Main Page
+# =========
+App 1.0 App.qml
+
+# Layout
+# ======
+Navi 1.0 AppLayout/Navi/Navi.qml
+NaviHeader 1.0 AppLayout/Navi/NaviHeader.qml
+
+Main 1.0 AppLayout/Main.qml
+Vis 1.0 AppLayout/Vis/Vis.qml
+Actions 1.0 AppLayout/Actions.qml
+
+MainHeader 1.0 AppLayout/MainHeader.qml
+MainHeaderMenu 1.0 AppLayout/MainHeaderMenu.qml
+VisHeader 1.0 AppLayout/Vis/VisHeader.qml
+BodyText 1.0 AppLayout/BodyText.qml
+Title 1.0 AppLayout/Title.qml
+Headline 1.0 AppLayout/Headline.qml
+Caption 1.0 AppLayout/Caption.qml
+Subheader 1.0 AppLayout/Subheader.qml
+Body 1.0 AppLayout/Body.qml
+Card 1.0 AppLayout/Card.qml
+TabsCard 1.0 AppLayout/TabsCard.qml
+
+CenteredImage 1.0 AppLayout/CenteredImage.qml
+FullWidthImage 1.0 AppLayout/FullWidthImage.qml
+
+# ToolBar
+# =======
+ToolBarGroup 1.0 AppLayout/ToolBar/ToolBarGroup.qml
+ToolBarMenu 1.0 AppLayout/ToolBar/ToolBarMenu.qml
+AppMainToolBarControls 1.0 AppLayout/ToolBar/AppMainToolBarControls.qml
+ToolBarDivider 1.0 AppLayout/ToolBar/ToolBar/ToolBarDivider.qml
+SmallToolBarButton 1.0 AppLayout/ToolBar/SmallToolBarButton.qml
+BigToolBarButton 1.0 AppLayout/ToolBar/BigToolBarButton.qml
+
+# Buttons
+# =======
+MenuButton 1.0 Components/Buttons/MenuButton.qml
+FlatButton 1.0 Components/Buttons/FlatButton.qml
+RaisedButton 1.0 Components/Buttons/RaisedButton.qml
+ToggleButton 1.0 Components/Buttons/ToggleButton.qml
+FloatingButton 1.0 Components/Buttons/FloatingButton.qml
+IconCheckBox 1.0 Components/Buttons/IconCheckBox.qml
+
+# Input
+# =====
+InputField 1.0 Components/Inputs/InputField.qml
+VectorField 1.0 Components/Inputs/VectorField.qml
+VectorField2D 1.0 Components/Inputs/VectorField2D.qml
+MatrixField 1.0 Components/Inputs/MatrixField.qml
+ValueInput 1.0 Components/Inputs/ValueInput.qml
+ValueField 1.0 Components/Inputs/ValueField.qml
+PythonValueConnector 1.0 Components/Inputs/PythonValueConnector.qml
+
+# Lists
+# =====
+DropDown 1.0 Components/Menus/DropDown.qml
+DropDownMenu 1.0 Components/Menus/DropDownMenu.qml
+RadioButtonGroup 1.0 Components/Menus/RadioButtonGroup.qml
+TreeView 1.0 Components/Lists/TreeView.qml
+PythonListModel 1.0 Models/PythonListModel.qml
+List 1.0 Components/Lists/List.qml
+ListItem 1.0 Components/Lists/ListItem.qml
+
+# Plotting
+# ========
+Matplotlib 1.0 Components/Plotting/Matplotlib.qml
