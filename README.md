@@ -21,6 +21,7 @@ Keep track of development and community news.
 **Andreas Rjasanow**
 
 - <https://twitter.com/_andrjas_>
+- <https://github.com/andrjas>
 
 **Rostyslav Lyulinetskyy**
 
