@@ -2,7 +2,7 @@
 
 **DICE** is an experimental open source project for a simplified creation of  user interfaces and utilities in the area of numerical simulations.
 
-![DICE Screenshot](http://dicehub.net/wp-content/uploads/2015/04/dice_desk.png "DICE Screenshot")
+![DICE Screenshot](http://dicehub.net/wp-content/uploads/2015/04/dice_desk.jpg "DICE Screenshot")
 
 ## Table of contents
 - [Community](#community)
